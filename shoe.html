@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shoe</title>
+    <style>
+        .frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        height: 400px;
+        margin-top: -200px;
+        margin-left: -200px;
+        border-radius: 2px;
+        box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+        overflow: hidden;
+        background: #fff;
+        color: #333;
+            font-family: 'Open Sans', Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .foot{
+            position: absolute;
+            left:20px;
+            bottom:2px;
+            transform-origin:center top;
+            animation:walk 2s 1s infinite linear;
+        }
+        .foot:last-of-type{
+            animation:walk 2s infinite linear;
+        }
+        @keyframes walk{
+            0%{
+                transform:rotate(-30deg) translate(0px, -4px);
+        }
+            25%{
+                transform:rotate(0deg) translate(0px, 0px)
+            }
+            50%{
+                transform:rotate(30deg) translate(0px, -10px)
+        }
+            75%{
+                transform:rotate(0deg) translate(0px, -20px)
+        }
+            100%{
+            transform:rotate(-30deg) translate(0px, -4px);
+            }	
+        }
+        .floor{
+            position: absolute;
+            top: 0px;
+            left: -200px;
+            height: 100px;
+            background-color: #333;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+              <div class="canvas">
+                  <img class="foot" src="https://100dayscss.com/codepen/doc-martens.svg" alt="">
+                  <img class="foot" src="https://100dayscss.com/codepen/doc-martens.svg" alt="">
+              </div>
+              <div class="floor">
+              </div>
+        </div>
+      </div>
+</body>
+</html>
+
+
